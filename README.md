@@ -5,7 +5,7 @@ AstonHack is Aston University's annual hackathon.
 
 A hackathon is an event where teams of up to 4 people work together in order to complete a project within a certain time limit (normally 24 hours).
 
-This website has been created for the 10th annual hackathon.
+This website has been updated for the 11th annual hackathon.
 
 
 ## Tech Stack
