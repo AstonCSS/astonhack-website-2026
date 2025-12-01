@@ -10,7 +10,7 @@ import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 export class CountdownComponent implements AfterViewInit {
   date: any;
   now: any;
-  targetDate: Date = new Date("Feb 22 2025 00:00:00");
+  targetDate: Date = new Date("Feb 7 2026 09:00:00");
   targetTime: any = this.targetDate.getTime();
   difference: number;
 
