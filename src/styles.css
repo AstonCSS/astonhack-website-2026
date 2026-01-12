@@ -3,6 +3,14 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+  --ah-bg: #0b0d10;     /* base */
+  --ah-bg-2: #111318;   /* alternate */
+  --ah-panel: rgba(255,255,255,0.06);
+  --ah-border: rgba(255,255,255,0.08);
+  --ah-accent: #66d8d6;
+}
+
 /* Tailwind classes */
 @layer components {
   .navbar-link {
@@ -14,7 +22,10 @@
   }
 
   .info-square {
-    @apply w-fit py-5 flex flex-col items-center justify-center text-xl;
+    @apply w-fit py-5 px-6 flex flex-col items-center justify-center text-xl rounded-xl;
+    background: var(--ah-bg);
+    border: 1px solid var(--ah-bg);
+    backdrop-filter: blur(10px);
   }
 
   .gallery_image {
@@ -26,23 +37,42 @@
   }
 
   .schedule-header {
-    @apply w-[95vw] md:w-fit text-2xl py-10 border-b-2 border-zinc-700 font-semibold text-center underline;
+    @apply w-[95vw] md:w-fit text-2xl py-10 border-b-2 font-semibold text-center underline;
+    border-color: rgba(255,255,255,0.12);
   }
 
+  /* ✅ Base section (replaces bg-zinc-800 default) */
   .site-section {
-    @apply w-full min-w-full min-h-fit py-12 outline-none border-none bg-zinc-800;
+    @apply w-full min-w-full min-h-fit py-12 outline-none border-none;
+    background: var(--ah-bg);
+  }
+
+  /* ✅ Alternate section (use this when needed) */
+  .site-section-alt {
+    background: var(--ah-bg-2);
   }
 
   .form-input {
-    @apply p-5 bg-zinc-400 text-black placeholder:text-zinc-700 focus:outline-none focus:ring-2 focus:ring-[#66d8d6] rounded-md;
+    @apply p-5 rounded-md focus:outline-none focus:ring-2;
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: white;
+    caret-color: white;
+    --tw-ring-color: var(--ah-accent);
   }
 }
+
 
 * {
   scroll-behavior: smooth;
   font-family: "JetBrains Mono", monospace;
-  color: white;
 }
+
+body {
+  color: white;
+  background: var(--ah-bg);
+}
+
 
 .jetbrains-mono-regular {
   font-family: "JetBrains Mono", monospace;
