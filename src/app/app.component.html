@@ -1,53 +1,84 @@
 <app-navbar />
 <section class="min-w-full min-h-screen flex flex-col items-center justify-center bg-transparent" id="hero">
-    <div class="min-w-full min-h-screen flex flex-col items-center justify-center gap-y-10" id="transparent-hero">
-        <section class="flex flex-col items-center justify-center">
-          <img src="/logo.png" alt="Aston Hack Logo" class="size-20 md:size-28 mb-5 object-contain">
-          <div class="flex flex-col items-center justify-center text-5xl md:text-8xl font-semibold">
-              <span class="text-xl">Welcome to</span>
-              <span class="tracking-wide"><span class="text-[#66d8d6]">ASTON</span>HACK</span>
-              <span class="text-xl">February <span class="text-[#66d8d6]">2026</span></span>
-          </div>
-          <app-countdown />
-        </section>
-        <!--<a
-          href="https://astonhack10.eventbrite.co.uk/"
-          target="_blank"
-          class="bg-[#66d8d6] px-10 py-3 rounded-lg hover:bg-[#66d8d6] hover:text-stone-200 transition-all duration-500"
-        >
-          Get Tickets
-        </a>--->
-    </div>
+  <div class="min-w-full min-h-screen flex flex-col items-center justify-center gap-y-10" id="transparent-hero">
+    <section class="flex flex-col items-center justify-center">
+      <img src="/logo.png" alt="Aston Hack Logo" class="size-20 md:size-28 mb-5 object-contain">
+      <div class="flex flex-col items-center justify-center text-5xl md:text-8xl font-semibold">
+        <span class="text-xl">Welcome to the 11th edition of</span>
+        <span class="tracking-wide"><span class="text-[#66d8d6]">ASTON</span>HACK</span>
+        <span class="text-xl">February <span class="text-[#66d8d6]">2026</span></span>
+      </div>
+      <app-countdown />
+    </section>
+    <a href="#tickets" class="bg-[#66d8d6] px-10 py-3 rounded-lg hover:text-stone-200 transition-all duration-500">
+      Get Tickets
+    </a>
+  </div>
 </section>
+
+<hr class="scroll-to-hr -translate-y-20" id="tickets">
+<section class="px-5 py-20 min-w-full min-h-fit flex flex-col items-center justify-center bg-[#111318]"
+  id="tickets-content" ngNonBindable>
+
+  <div class="text-center flex flex-col items-center justify-center">
+    <div class="lg:max-w-[50vw] w-full">
+      <h2 class="text-5xl">TICKETS</h2>
+      <hr class="my-6 mx-auto w-40 border-[#66d8d6]/40">
+
+
+      <p class="my-5 opacity-80">
+        Tickets are free, registration required.
+      </p>
+
+      <div class="tito-container">
+        <tito-widget event="astoncss/astonhack11"></tito-widget>
+      </div>
+
+      <p class="mt-4 text-sm opacity-60">
+        If registration doesn’t load, open it directly on Tito.
+        <a class="underline" href="https://ti.to/astoncss/astonhack11" target="_blank" rel="noopener">Click here</a>.
+      </p>
+    </div>
+  </div>
+</section>
+
 
 <hr class="scroll-to-hr -translate-y-20" id="about">
-<section class="px-5 py-20 min-w-full min-h-fit flex flex-col items-center justify-center bg-zinc-900" id="about-content">
-    <div class="text-center flex flex-col items-center justify-center">
-        <div class="lg:max-w-[50vw]">
-            <h2 class="text-5xl">ABOUT THE EVENT</h2>
+<section class="px-5 py-20 min-w-full min-h-fit flex flex-col items-center justify-center bg-[#0b0d10]"
+  id="about-content">
+  <div class="text-center flex flex-col items-center justify-center">
+    <div class="lg:max-w-[50vw]">
+      <h2 class="text-5xl">ABOUT THE EVENT</h2>
+      <hr class="my-6 mx-auto w-40 border-[#66d8d6]/40">
 
-            <p class="my-5">We’re excited to announce the official launch for AstonHack11.</p>
-            <p class="my-5">Our Hackathon will run from the 7th to 8th of February and will be an enjoyable, creative and inspiring experience for hackers and organisers alike</p>
-            <p class="my-5">Hackathons are invention marathons where attendees dream up and bring to life ideas for apps, websites,
-            robots, and more. We are inviting  students to join us for 24 hours while we develop the ideas for the future!</p>
-            <p class="my-5">Whether you’re just getting started or you’ve been programming for years, hackathons are a great place to learn new skills,
-                build your network, find jobs, and most importantly have fun. <p>
-            <hr class="my-10">
-        </div>
+
+      <p class="my-5">We’re excited to announce the official launch for AstonHack11.</p>
+      <p class="my-5">Our Hackathon will run from the 7th to 8th of February and will be an enjoyable, creative and
+        inspiring experience for hackers and organisers alike</p>
+      <p class="my-5">Hackathons are invention marathons where attendees dream up and bring to life ideas for apps,
+        websites,
+        robots, and more. We are inviting students to join us for 24 hours while we develop the ideas for the future!
+      </p>
+      <p class="my-5">Whether you’re just getting started or you’ve been programming for years, hackathons are a great
+        place to learn new skills,
+        build your network, find jobs, and most importantly have fun.
+      <p>
+        <hr class="my-10">
     </div>
-    <div class="md:space-x-32 flex flex-col md:flex-row items-center justify-center">
-      <div class="info-square">
-          <h2 class="font-bold">WHERE</h2>
-          <p>Aston University</p>
-      </div>
-      <div class="info-square">
-          <h2 class="font-bold">WHEN</h2>
-          <p>February 7th, 2026</p>
-      </div>
+  </div>
+  <div class="md:space-x-32 flex flex-col md:flex-row items-center justify-center">
+    <div class="info-square">
+      <h2 class="font-bold">WHERE</h2>
+      <p>Aston University</p>
     </div>
+    <div class="info-square">
+      <h2 class="font-bold">WHEN</h2>
+      <p>February 7th, 2026</p>
+    </div>
+  </div>
 </section>
 <hr class="scroll-to-hr -translate-y-12" id="gallery">
-<section class="site-section pt-24" id="gallery-content">
+<section class="site-section site-section-alt pt-24" id="gallery-content">
   <app-gallery />
 </section>
 
@@ -66,12 +97,12 @@
 
 <!-- FAQ Section -->
 <hr class="scroll-to-hr -translate-y-20" id="faq">
-<section id="faq-content" class="site-section bg-zinc-900">
+<section id="faq-content" class="site-section">
   <app-faq />
 </section>
 <!-- Contact -->
 <hr class="scroll-to-hr -translate-y-20" id="contact">
-<section id="contact-content" class="site-section pb-24">
+<section id="contact-content" class="site-section site-section-alt pb-24">
   <app-contact />
 </section>
 <app-footer />
